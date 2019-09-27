@@ -1,0 +1,77 @@
+<div>
+  <form class="container">
+    <div style="margin: 0px 0px 27px 0px">
+      Time Started To Submit Form : {{ this.time | date: 'mediumTime' }}
+    </div>
+    <div>
+      <input
+        type="text"
+        id="firstName"
+        class="form-control"
+        placeholder="First Name"
+        style="margin: 0px 0px 27px 0px"
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        id="lastName"
+        class="form-control mb-4"
+        placeholder="Last Name"
+        style="margin: 0px 0px 27px 0px"
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        id="college"
+        class="form-control mb-4"
+        placeholder="College"
+        style="margin: 0px 0px 27px 0px"
+      />
+    </div>
+    <div>
+      <input
+        type="number"
+        id="phonenumber"
+        class="form-control mb-4"
+        placeholder="Phone Number"
+        style="margin: 0px 0px 27px 0px"
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        id="gmail"
+        placeholder="Gmail"
+        style="margin: 0px 0px 27px 0px"
+      />
+    </div>
+
+    <div>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        placeholder="password"
+        style="margin: 0px 0px 27px 0px"
+      />
+    </div>
+    <div *ngIf="displayText" style="margin: 0px 0px 27px 0px">
+      <p>Form is Locked Please press Start Button</p>
+      <button class="sta" (click)="startTime()">Start</button>
+    </div>
+
+    <button
+      [routerLink]="displayUrl"
+      color="info"
+      block="true"
+      class="sum"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+<router-outlet></router-outlet>
